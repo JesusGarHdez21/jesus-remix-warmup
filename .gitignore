@@ -1,18 +1,45 @@
+# --- System Files ---
 .DS_Store
+Thumbs.db
+
+# --- Node / Dependencies ---
+node_modules/
+.npm
+npm-debug.log*
+
+# --- Remix / React Router Build Artifacts ---
+.cache/
+build/
+public/build/
+.react-router/
+
+# --- Cloudflare / Wrangler ---
+.wrangler/
+dist/
+.dev.vars
+# .dev.vars is where you keep your TMDB_API_KEY locally; 
+# NEVER commit this file to GitHub.
+
+# --- Environment Variables ---
 .env
-/node_modules/
+.env.local
+.env.*.local
+
+# --- TypeScript ---
 *.tsbuildinfo
 
-# React Router
-/.react-router/
-/build/
+# --- Testing ---
+/coverage
+/test-results
 
-# Cloudflare
-.mf
-.wrangler
-.dev.vars*
-worker-configuration.d.ts
-
-
-!.dev.vars.example
-!.env.example
+# --- IDEs ---
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
