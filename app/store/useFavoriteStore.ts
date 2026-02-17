@@ -6,8 +6,8 @@ export const useFavorite = create<FavoriteState>()(
     persist(
         (set) => ({
             favorites: [],
-            toggleFavorite: (movie) =>
-                set((state) => {
+            toggleFavorite: (movie: Movie) =>
+                set((state: any) => {
                     const isFavorite = state.favorites.some((f) => f.id === movie.id);
                     if (isFavorite) {
                         return { favorites: state.favorites.filter((f) => f.id !== movie.id) };
