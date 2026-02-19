@@ -8,12 +8,13 @@ import {
 } from "react-router";
 
 import stylesheet from "./tailwind.css?url";
+import { useState } from "react";
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
 ];
 
 export default function App() {
-  const queryClient = new QueryClient();
+  const [queryClient] = useState(() => new QueryClient());
 
   return (
     <html lang="es">
